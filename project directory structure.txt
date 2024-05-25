@@ -1,0 +1,34 @@
+EchoSafe
+	-backend
+		-config
+			-db.js
+			-passport.js
+		-controllers
+		-models
+			-User.js
+		-routes
+			-auth.js
+			-users.js
+		-.env
+		-server.js
+	-frontend
+		-alerts (feature of project, like a tab to provide alerts to users)
+		-digital_footprints (to give insights about users digital footprint)
+		-password managment (managing users password)
+		-overview (provide overview of complete application)
+		-settings
+		-support
+		-js
+			-script.js
+		-css
+			-styles.css
+		-images
+		-index.html
+		-contact.html (contact us page)
+		-features.html (showing featues of application)
+		-pricing.html 
+		-create.html (account creation)
+	-node_modules
+	-package-lock.json
+	-package.json
+

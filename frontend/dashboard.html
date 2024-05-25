@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoSafe Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            background-size: cover;
+            background-color: black;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 1.25em;
+            margin-bottom: 40px;
+        }
+
+        .hero-section .btn {
+            font-size: 1.25em;
+            padding: 10px 20px;
+        }
+
+        .quick-links {
+            margin-top: 40px;
+        }
+
+        .quick-link-card {
+            padding: 20px;
+            margin: 10px 0;
+            text-align: center;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .quick-link-card i {
+            font-size: 2.5em;
+            color: #2980b9;
+            margin-bottom: 10px;
+        }
+
+        .quick-link-card:hover {
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+
+        .widget {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .widget h3 {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        .widget ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .widget ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">EchoSafe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="overview/index.html">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="password_management/index.html">Password Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="digital_footprint/index.html">Digital Footprint</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="alerts/index.html">Alerts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="settings/index.html">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="support/index.html">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero-section">
+        <h1>Welcome to EchoSafe</h1>
+        <p>Your ultimate solution for digital identity security and advanced password management.</p>
+        <a href="overview/index.html" class="btn btn-primary">Get Started</a>
+    </div>
+
+    <div class="container mt-5">
+        <h2>Overview</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="widget">
+                    <h3>Recent Activity</h3>
+                    <ul>
+                        <li>Logged in from a new device</li>
+                        <li>Password changed for Google account</li>
+                        <li>Potential breach detected on LinkedIn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="widget">
+                    <h3>Security Status</h3>
+                    <p>All systems are secure</p>
+                    <p>Two-factor authentication not enabled on 3 accounts</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="widget">
+                    <h3>Password Strength</h3>
+                    <canvas id="passwordStrengthChart" width="200" height="200"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row quick-links">
+            <div class="col-md-4">
+                <div class="quick-link-card card" onclick="window.location.href='overview/index.html'">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h5>Overview</h5>
+                    <p>View your recent activities and security status.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="quick-link-card card" onclick="window.location.href='password_management/index.html'">
+                    <i class="fas fa-key"></i>
+                    <h5>Password Management</h5>
+                    <p>Manage and secure your passwords.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="quick-link-card card" onclick="window.location.href='digital_footprint/index.html'">
+                    <i class="fas fa-user-secret"></i>
+                    <h5>Digital Footprint</h5>
+                    <p>Monitor your online presence and risks.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="quick-link-card card" onclick="window.location.href='alerts/index.html'">
+                    <i class="fas fa-bell"></i>
+                    <h5>Alerts</h5>
+                    <p>Receive real-time security alerts.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="quick-link-card card" onclick="window.location.href='settings/index.html'">
+                    <i class="fas fa-cogs"></i>
+                    <h5>Settings</h5>
+                    <p>Customize your account settings.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="quick-link-card card" onclick="window.location.href='support/index.html'">
+                    <i class="fas fa-life-ring"></i>
+                    <h5>Support</h5>
+                    <p>Get help and support for EchoSafe.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 EchoSafe. All rights reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

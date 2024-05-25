@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EchoSafe Dashboard</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9fafc;
+            color: #333;
+            padding-bottom: 60px; /* Space for footer */
+        }
+        .navbar {
+            background-color: #2c3e50;
+        }
+        .navbar-brand {
+            color: #ecf0f1 !important;
+            font-size: 1.75em;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            color: #ecf0f1 !important;
+            margin-right: 15px;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #3498db !important;
+        }
+        .container {
+            margin-top: 40px;
+        }
+        .card {
+            margin: 20px 0;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #2980b9;
+            color: #fff;
+            font-size: 1.25em;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .overview-card {
+            border-left: 6px solid #2980b9;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+        }
+        .nav-tabs {
+            border-bottom: 2px solid #2980b9;
+        }
+        .nav-tabs .nav-link {
+            border: 1px solid transparent;
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;
+            color: #2980b9;
+            font-weight: 500;
+        }
+        .nav-tabs .nav-link.active {
+            color: #fff;
+            background-color: #2980b9;
+            border-color: #2980b9 #2980b9 #f9fafc;
+        }
+        .tab-content {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+        .btn-primary {
+            background-color: #2980b9;
+            border-color: #2980b9;
+        }
+        .btn-primary:hover {
+            background-color: #3498db;
+            border-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">EchoSafe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Password Management</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Digital Footprint</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Alerts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Settings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Support</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="overview-card">
+            <h2>Welcome to EchoSafe Dashboard</h2>
+            <p>EchoSafe is at the forefront of digital identity security and advanced password management. Explore our features and take control of your digital presence.</p>
+        </div>
+
+        <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="password-management-tab" data-toggle="tab" href="#password-management" role="tab" aria-controls="password-management" aria-selected="true">Password Management</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="digital-footprint-tab" data-toggle="tab" href="#digital-footprint" role="tab" aria-controls="digital-footprint" aria-selected="false">Digital Footprint</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="alerts-tab" data-toggle="tab" href="#alerts" role="tab" aria-controls="alerts" aria-selected="false">Alerts</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="dashboardTabsContent">
+            <div class="tab-pane fade show active" id="password-management" role="tabpanel" aria-labelledby="password-management-tab">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-key"></i> Password Management
+                    </div>
+                    <div class="card-body">
+                        <p>Securely store and manage your passwords using state-of-the-art encryption.</p>
+                        <a href="#" class="btn btn-primary">Manage Passwords</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="digital-footprint" role="tabpanel" aria-labelledby="digital-footprint-tab">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-user-secret"></i> Digital Footprint
+                    </div>
+                    <div class="card-body">
+                        <p>Monitor your digital presence and receive alerts about potential data breaches.</p>
+                        <a href="#" class="btn btn-primary">View Footprint</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="alerts" role="tabpanel" aria-labelledby="alerts-tab">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="fas fa-bell"></i> Alerts
+                    </div>
+                    <div class="card-body">
+                        <p>Stay informed with real-time alerts and recommendations to enhance your security.</p>
+                        <a href="#" class="btn btn-primary">View Alerts</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 EchoSafe. All rights reserved.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
